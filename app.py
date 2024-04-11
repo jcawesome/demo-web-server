@@ -36,6 +36,10 @@ def verify_token(token):
         raise InvalidTokenError("Invalid token")
 
 
+@app.route('/')
+def hello_world():
+    return 'Hello from Flask!'
+
 @app.route('/login', methods=['POST'])
 def login():
     """Handles login requests and generates access token."""
